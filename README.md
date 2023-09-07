@@ -19,7 +19,7 @@ Crear una calculadora de consumo de aire para las inmersiones del buceo.
 
 1. Abrir la terminal (en la carpeta del proyecto)
 2. ejecutar el script: `python3 calculadora.py`
-3. Ir introduciendo los datos qué pide la calculadora para resolver la formula.
+3. Introducir los datos que se requieren por terminal.
 
 Al acabar de introducir los datos te devolverá el consumo de aire basado en:
  - bares de la botella
