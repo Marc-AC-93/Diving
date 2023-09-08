@@ -11,25 +11,25 @@ class bcolors:
 try:
     bar_ini = int(input("Bares iniciales: "))
 except:
-    print("[Error] Los bares deben ser un número")
+    print("[Error] Los bares deben ser un número entero")
     exit()
 
 try:
     bar_fin = int(input("Bares finales: "))
 except:
-    print("[Error] Los bares deben ser un número")
+    print("[Error] Los bares deben ser un número entero")
     exit()
 
 try:
     tankL = int(input("Litros del tanque: "))
 except:
-    print("[Error] Los litros del tanque deben ser un número")
+    print("[Error] Los litros del tanque deben ser un número entero")
     exit()
 
 try:
     divingTime = int(input("Tiempo de inmersión (minutos): "))
 except:
-    print("[Error] El tiempo total debe ser un número")
+    print("[Error] El tiempo total debe ser un número entero")
     exit()
 
 try:
@@ -41,4 +41,6 @@ except:
 total= str(round(float((((bar_ini - bar_fin) * tankL) / divingDeepAvg ) / divingTime), 2))
 
 color = bcolors.GREEN if 20 > float(total) > 0 else bcolors.RED
-print(f"\n{bcolors.BOLD}RESULTADO{bcolors.ENDC}\n{bcolors.BOLD}Consumo ={bcolors.ENDC} {color}{total}{bcolors.ENDC} bares / minuto")
+print(f"{color}-------------{bcolors.ENDC}\n{color}|{bcolors.ENDC} "
+      f"{bcolors.BOLD}RESULTADO{bcolors.ENDC} {color}|{bcolors.ENDC}\n{color}-------------{bcolors.ENDC}"
+      f"\nConsumo de aire: {color}{total}{bcolors.ENDC} bares / minuto")
